@@ -50,3 +50,4 @@ You must work on this assignment using:
 	Update the asset URL according to your root folder
 	- 'asset_url'  => '/interview-case-study/public',
 	- npm install
+	- please use DB dupm /interview-case-study/database/tailwind_css_db_back_up_20201013.sql
