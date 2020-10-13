@@ -16,17 +16,22 @@ class ItemsController extends Component
 
     public function addToCart($item_id = null)
     {
-        $item_cost = Item::where('id', $item_id)->select('item_price')->first();
+        if(!Auth::id()){
+            session()->flash('message', 'red|Please login.');
+        }else{
 
-        AddCart::firstOrCreate([
-            'user_id'           => Auth::id(),
-            'item_id'           => $item_id,
-            'quantity'          => 1,
-            'item_price'        => $item_cost->item_price,
-            'item_order_status' => 1,
-        ]);
+            $item_cost = Item::where('id', $item_id)->select('item_price')->first();
 
-        session()->flash('message', 'green|Item added to cart successfully.');
+            AddCart::firstOrCreate([
+                'user_id'           => Auth::id(),
+                'item_id'           => $item_id,
+                'quantity'          => 1,
+                'item_price'        => $item_cost->item_price,
+                'item_order_status' => 1,
+            ]);
+
+            session()->flash('message', 'green|Item added to cart successfully.');
+        }
     }
 
     public function render()

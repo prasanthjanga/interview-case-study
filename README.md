@@ -36,3 +36,17 @@ You must work on this assignment using:
 2. Product attributes and filtering e.g brand, category
 3. Add unit tests
 5. Deploy app to a server
+
+### Instalation steps
+	- composer install
+	- cp .env.example .env
+	Update DB details & app URL in .env file
+
+	- php artisan key:generate
+	- php artisan storage:link
+	- php artisan vendor:publish
+	- Please enter 25 ([25] Tag: livewire)
+	- config/livewire.php
+	Update the asset URL according to your root folder
+	- 'asset_url'  => '/interview-case-study/public',
+	- npm install

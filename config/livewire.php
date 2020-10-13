@@ -43,7 +43,7 @@ return [
     */
 
     // 'asset_url'  => null,
-    'asset_url'  => '/tailwind_css/public',
+    'asset_url'  => '/interview-case-study/public',
 
     /*
     |--------------------------------------------------------------------------
