@@ -37,7 +37,7 @@ You must work on this assignment using:
 3. Add unit tests
 5. Deploy app to a server
 
-### Instalation steps
+### Installation steps
 	- composer install
 	- cp .env.example .env
 	Update DB details & app URL in .env file
